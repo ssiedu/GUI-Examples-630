@@ -1,5 +1,7 @@
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Point;
 
 /*
@@ -35,6 +37,21 @@ public class GUISix extends java.awt.Frame {
         button2 = new java.awt.Button();
         button3 = new java.awt.Button();
         button4 = new java.awt.Button();
+        button5 = new java.awt.Button();
+        button6 = new java.awt.Button();
+        button7 = new java.awt.Button();
+        button8 = new java.awt.Button();
+        button9 = new java.awt.Button();
+        c1 = new java.awt.Checkbox();
+        c2 = new java.awt.Checkbox();
+        c3 = new java.awt.Checkbox();
+        button10 = new java.awt.Button();
+        button11 = new java.awt.Button();
+        button12 = new java.awt.Button();
+        button13 = new java.awt.Button();
+        button14 = new java.awt.Button();
+        button15 = new java.awt.Button();
+        ch = new java.awt.List();
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -44,9 +61,10 @@ public class GUISix extends java.awt.Frame {
         setLayout(null);
 
         l1.setBackground(new java.awt.Color(204, 255, 204));
-        l1.setText("Welcome");
+        l1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        l1.setText("On");
         add(l1);
-        l1.setBounds(60, 40, 80, 50);
+        l1.setBounds(50, 20, 120, 60);
 
         button1.setLabel("Size");
         button1.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +82,7 @@ public class GUISix extends java.awt.Frame {
             }
         });
         add(button2);
-        button2.setBounds(120, 150, 36, 24);
+        button2.setBounds(50, 180, 36, 24);
 
         button3.setLabel("Vsbl");
         button3.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +91,7 @@ public class GUISix extends java.awt.Frame {
             }
         });
         add(button3);
-        button3.setBounds(190, 150, 40, 24);
+        button3.setBounds(50, 210, 40, 24);
 
         button4.setLabel("Enbl");
         button4.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +100,123 @@ public class GUISix extends java.awt.Frame {
             }
         });
         add(button4);
-        button4.setBounds(270, 150, 41, 24);
+        button4.setBounds(60, 330, 41, 24);
+
+        button5.setLabel("button5");
+        button5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button5ActionPerformed(evt);
+            }
+        });
+        add(button5);
+        button5.setBounds(50, 240, 57, 24);
+
+        button6.setBackground(new java.awt.Color(28, 77, 179));
+        button6.setLabel("button6");
+        button6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button6ActionPerformed(evt);
+            }
+        });
+        add(button6);
+        button6.setBounds(50, 270, 57, 24);
+
+        button7.setLabel("Font");
+        button7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button7ActionPerformed(evt);
+            }
+        });
+        add(button7);
+        button7.setBounds(60, 300, 40, 24);
+
+        button8.setLabel("Change");
+        button8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button8ActionPerformed(evt);
+            }
+        });
+        add(button8);
+        button8.setBounds(120, 150, 60, 24);
+
+        button9.setLabel("Off");
+        button9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button9ActionPerformed(evt);
+            }
+        });
+        add(button9);
+        button9.setBounds(120, 180, 31, 24);
+
+        c1.setLabel("check-all");
+        c1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                c1ItemStateChanged(evt);
+            }
+        });
+        add(c1);
+        c1.setBounds(130, 220, 84, 20);
+
+        c2.setLabel("java");
+        add(c2);
+        c2.setBounds(130, 250, 84, 20);
+
+        c3.setLabel("python");
+        add(c3);
+        c3.setBounds(130, 280, 84, 20);
+
+        button10.setLabel("Add");
+        button10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button10ActionPerformed(evt);
+            }
+        });
+        add(button10);
+        button10.setBounds(310, 150, 37, 24);
+
+        button11.setLabel("Rem-First");
+        button11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button11ActionPerformed(evt);
+            }
+        });
+        add(button11);
+        button11.setBounds(310, 190, 71, 24);
+
+        button12.setLabel("Rem-Last");
+        button12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button12ActionPerformed(evt);
+            }
+        });
+        add(button12);
+        button12.setBounds(310, 230, 71, 24);
+
+        button13.setLabel("Rem-Cur");
+        button13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button13ActionPerformed(evt);
+            }
+        });
+        add(button13);
+        button13.setBounds(310, 270, 67, 24);
+
+        button14.setLabel("Next");
+        button14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button14ActionPerformed(evt);
+            }
+        });
+        add(button14);
+        button14.setBounds(400, 150, 40, 24);
+
+        button15.setLabel("button15");
+        add(button15);
+        button15.setBounds(400, 190, 64, 24);
+
+        ch.setMultipleMode(true);
+        add(ch);
+        ch.setBounds(310, 40, 70, 80);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,6 +266,107 @@ public class GUISix extends java.awt.Frame {
         button1.setEnabled(!b);
     }//GEN-LAST:event_button4ActionPerformed
 
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
+        
+        l1.setBackground(Color.WHITE);
+        
+    }//GEN-LAST:event_button5ActionPerformed
+
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
+        // TODO add your handling code here:
+        //l1.setBackground(Color.yellow);
+        Color cL=new Color(100,150,160);
+        l1.setBackground(cL);
+    }//GEN-LAST:event_button6ActionPerformed
+
+    private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
+        // TODO add your handling code here:
+        Font fnt=new Font("Arial",(Font.BOLD+Font.ITALIC),25);
+        l1.setFont(fnt);
+    }//GEN-LAST:event_button7ActionPerformed
+
+    private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
+
+        //check the current text
+            String s=l1.getText();
+        //change the text
+            if(s.equals("On")){
+                l1.setText("Off");
+            }else{
+                l1.setText("On");
+            }
+        
+        
+    }//GEN-LAST:event_button8ActionPerformed
+
+    private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
+        // TODO add your handling code here:
+        String s=button9.getLabel();
+        if(s.equals("Off")){
+            button9.setLabel("On");
+        }else{
+            button9.setLabel("Off");
+        }
+    }//GEN-LAST:event_button9ActionPerformed
+
+    private void c1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_c1ItemStateChanged
+        
+        boolean b=c1.getState();
+        
+             
+        if(b==true){
+            c2.setState(true);
+            c3.setState(true);
+        }else{
+            c2.setState(false);
+            c3.setState(false);
+        }
+            
+        
+        //c2.setState(b);
+        //c3.setState(b);
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_c1ItemStateChanged
+
+    private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
+        // TODO add your handling code here:
+        ch.add("bhopal");
+        ch.add("chennai");
+        ch.add("delhi");
+        ch.add("indore");
+        ch.add("mumbai");
+        ch.add("pune");
+        button10.setEnabled(false);
+    }//GEN-LAST:event_button10ActionPerformed
+
+    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
+        // TODO add your handling code here:
+        //ch.remove("bhopal");
+        ch.remove(0);
+    }//GEN-LAST:event_button11ActionPerformed
+
+    private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
+        int n=ch.getItemCount();
+        ch.remove(n-1);
+        
+    }//GEN-LAST:event_button12ActionPerformed
+
+    private void button13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button13ActionPerformed
+        // TODO add your handling code here:
+        String s=ch.getSelectedItem();
+        ch.remove(s);
+    }//GEN-LAST:event_button13ActionPerformed
+
+    private void button14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button14ActionPerformed
+        // TODO add your handling code here:
+        int idx=ch.getSelectedIndex();
+        ch.select(idx+1);
+    }//GEN-LAST:event_button14ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -146,9 +381,24 @@ public class GUISix extends java.awt.Frame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button button1;
+    private java.awt.Button button10;
+    private java.awt.Button button11;
+    private java.awt.Button button12;
+    private java.awt.Button button13;
+    private java.awt.Button button14;
+    private java.awt.Button button15;
     private java.awt.Button button2;
     private java.awt.Button button3;
     private java.awt.Button button4;
+    private java.awt.Button button5;
+    private java.awt.Button button6;
+    private java.awt.Button button7;
+    private java.awt.Button button8;
+    private java.awt.Button button9;
+    private java.awt.Checkbox c1;
+    private java.awt.Checkbox c2;
+    private java.awt.Checkbox c3;
+    private java.awt.List ch;
     private java.awt.Label l1;
     // End of variables declaration//GEN-END:variables
 }
